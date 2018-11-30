@@ -95,6 +95,7 @@ int main(int argc, char * argv[])
 
 void * handle_recv_packet(void * data)
 {
+    CURL_BUFFER_T * res_data = NULL;
     char * packet = (char *)data;
     char * url = get_location(packet);
     if (url == NULL)
@@ -104,7 +105,7 @@ void * handle_recv_packet(void * data)
     }
 
     printf("url: %s\n", url);
-    CURL_BUFFER_T * res_data = init_curl_buffer(DEFAULT_CURL_LENGTH);
+    res_data = init_curl_buffer(DEFAULT_CURL_LENGTH);
     if (res_data == NULL)
     {
         goto THREAD_EXIT;
