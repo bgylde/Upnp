@@ -114,6 +114,7 @@ void * handle_recv_packet(void * data)
     printf("res_data: \n%s\n", res_data->data);
 
 THREAD_EXIT:
+    uninit_curl_buffer(&res_data);
     IF_NOT_NULL_FREE(url);
     IF_NOT_NULL_FREE(packet);
 

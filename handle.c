@@ -36,7 +36,7 @@ CURL_BUFFER_T * init_curl_buffer(size_t buffer_len)
     return buffer;
 }
 
-void uninit_curl_buffer(void ** buffer)
+void uninit_curl_buffer(CURL_BUFFER_T ** buffer)
 {
     if (buffer == NULL)
     {
