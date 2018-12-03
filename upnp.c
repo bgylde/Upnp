@@ -56,7 +56,8 @@ int main(int argc, char * argv[])
     strcat(buf, "HOST: 239.255.255.250:1900\r\n");
     strcat(buf, "MAN: \"ssdp:discover\"\r\n");
     strcat(buf, "MX: 5\r\n");
-    strcat(buf, "ST: urn:schemas-upnp-org:device:MediaRenderer:1\r\n");
+    //strcat(buf, "ST: urn:schemas-upnp-org:device:MediaRenderer:1\r\n");
+    strcat(buf, "ST: upnp:rootdevice\r\n");
     strcat(buf, "\r\n\r\n");
     printf("send buf:\n%s\n", buf);
 
